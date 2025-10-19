@@ -1,134 +1,134 @@
-/* GLOBAL USLUBLAR */
+/* GLOBAL USLUBLAR - RETRO/MAGAZIN STYLE */
 :root {
-    --primary-color: #ff4b4b; /* Yorqin Qizil/Korall rang */
-    --secondary-color: #333333; /* To'q kulrang */
-    --background-color: #f8f8f8;
-    --card-background: #ffffff;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --primary-color: #3e2723; /* To'q qahva rang */
+    --secondary-color: #5d4037; /* Och qahva rang */
+    --background-color: #f7f3e8; /* Qadimiy qog'oz rangi */
+    --border-color: #3e2723;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lora', serif;
     background-color: var(--background-color);
-    color: var(--secondary-color);
+    color: var(--primary-color);
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
-/* HEADER USLUBLAR */
+/* HEADER USLUBLAR (Jurnal qopqog'i) */
 header {
-    background-color: var(--card-background);
-    padding: 40px 20px;
+    background-color: #fff;
+    border-bottom: 5px double var(--primary-color);
+    padding: 20px 0;
     text-align: center;
-    border-bottom: 3px solid var(--primary-color);
+    margin-bottom: 30px;
 }
 
-header h1 {
-    margin: 0 0 10px 0;
-    font-size: 2.5em;
-    color: var(--secondary-color);
-    font-weight: 800;
+.magazine-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: 3px solid var(--primary-color);
+    padding: 5px 15px;
+    display: inline-block;
 }
 
 .subtitle {
-    color: #666;
-    font-weight: 400;
-    font-size: 1.1em;
+    font-size: 1em;
+    color: var(--secondary-color);
+    margin-top: 10px;
+    font-style: italic;
 }
 
-/* ASOSIY QISM VA KARTA USLUBLARI */
+/* ASOSIY QISM VA MAQOLALAR */
 main {
-    max-width: 1000px;
-    margin: 30px auto;
+    max-width: 850px;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
-.card {
-    background-color: var(--card-background);
+.magazine-article {
+    border: 1px solid var(--border-color);
     padding: 25px;
     margin-bottom: 30px;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
+    background-color: #fcfcf5;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1); /* Qalin soya */
 }
 
-.section-title {
+.article-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    font-weight: 700;
     color: var(--primary-color);
-    font-weight: 600;
-    font-size: 1.7em;
+    margin-top: 0;
     margin-bottom: 20px;
-    border-left: 5px solid var(--primary-color);
-    padding-left: 10px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* CHAT MOKAP USLUBLARI */
 .chat-mockup {
-    background-color: #e8e8e8; /* Mockup fon rangi */
+    border: 2px dashed #a1887f;
     padding: 15px;
-    border-radius: 10px;
+    background-color: #fffaf0;
     display: flex;
     flex-direction: column;
 }
 
 .chat-message {
-    padding: 10px 15px;
+    padding: 8px 12px;
     margin-bottom: 8px;
-    border-radius: 18px;
-    max-width: 75%;
-    word-wrap: break-word;
-    font-size: 0.95em;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 0; /* To'g'ri burchaklar */
+    max-width: 70%;
+    border: 1px solid #c0c0c0;
+    box-shadow: none;
 }
 
 .chat-name {
     font-weight: 700;
-    color: #0088cc; /* Telegram aksent */
-    margin-right: 5px;
+    color: var(--secondary-color);
+    display: block;
+    margin-bottom: 3px;
 }
 
 .user-right {
-    background-color: #cfd8dc; /* Yashil (boshqa user) o'rniga neytral rang */
+    background-color: #e8e8e8;
     align-self: flex-end;
 }
 
 .user-left {
-    background-color: #ffffff; /* Oq (asosiy user) */
+    background-color: #f0f0f0;
     align-self: flex-start;
 }
 
 /* JADVAL USLUBLARI */
 table {
     width: 100%;
-    border-collapse: separate; /* Border radius uchun */
-    border-spacing: 0;
-}
-
-.table-responsive {
-    overflow-x: auto;
-    border: 1px solid #eee;
-    border-radius: 8px;
+    border-collapse: collapse;
 }
 
 th, td {
-    padding: 14px 18px;
-    text-align: left;
-    border-right: 1px solid #eee;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid var(--border-color);
 }
 
 th {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: white;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-right: 1px solid #444;
-}
-
-td:last-child, th:last-child {
-    border-right: none;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    letter-spacing: 2px;
 }
 
 tr:nth-child(even) {
-    background-color: #f5f5f5;
+    background-color: #fcfaf3;
 }
 
 /* IJTIMOIY TARMOQLAR USLUBLARI */
@@ -136,69 +136,46 @@ tr:nth-child(even) {
     list-style-type: none;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 10px;
 }
 
 .social-list li {
-    padding: 10px 15px;
-    border-radius: 6px;
-    color: white;
-    font-weight: 600;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: transform 0.2s;
+    padding: 8px 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 0;
+    color: var(--primary-color);
+    font-weight: 700;
+    background-color: transparent;
+    transition: background-color 0.3s;
 }
 
 .social-list li:hover {
-    transform: translateY(-3px);
+    background-color: var(--primary-color);
+    color: white;
 }
-
-/* Har bir tarmoq uchun maxsus rang */
-.telegram { background-color: #0088cc; }
-.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-.facebook { background-color: #4267B2; }
-.tiktok { background-color: #000000; }
-.youtube { background-color: #FF0000; }
 
 /* XULOSA USLUBLARI */
 .conclusion-section {
-    border-left: 5px solid var(--primary-color);
-    background-color: #fff9f9;
+    border: 4px solid var(--border-color); /* Qalin chegara */
+    background-color: #fff9e6;
+    padding: 30px;
 }
 
 .conclusion-text {
-    font-style: normal;
-    font-size: 1.15em;
+    font-style: italic;
+    font-size: 1.1em;
     color: var(--secondary-color);
-    border: 1px dashed var(--primary-color);
-    padding: 15px;
-    border-radius: 6px;
-    background-color: #ffffff;
+    text-align: justify;
 }
 
 /* FOOTER USLUBLARI */
 footer {
     text-align: center;
-    padding: 20px 0;
-    background-color: var(--secondary-color);
-    color: #fff;
+    padding: 15px 0;
+    background-color: var(--primary-color);
+    color: white;
     margin-top: 40px;
     font-size: 0.9em;
-}
-
-/* Responsive (Mobil moslashuv) */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2em;
-    }
-    .card {
-        padding: 15px;
-    }
-    .user-left, .user-right {
-        max-width: 95%;
-    }
-    .social-list {
-        flex-direction: column;
-    }
+    font-family: 'Playfair Display', serif;
 }
